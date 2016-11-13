@@ -7,7 +7,7 @@ provides counterparts to PHP’s [array_map](http://php.net/manual/fr/function.a
 multicore and multiprocessor systems.
 
 This code is initially intended as a demo to show the benefits of a functional approach to
-programming on collections. However, it does work and should be useable in a production environment.
+programming on collections. However, it does work and should be usable in a production environment.
 
 ## Basic example:
 ```php

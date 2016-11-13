@@ -2,7 +2,7 @@
     "name": "olivierperes/lambda-pi",
     "description": "Parallel implementation of a functional interface on vectors",
     "license": "MIT",
-    "keywords": ["functional", "parallel"],
+    "keywords": ["functional", "parallel", "vector"],
     "authors": [
         {
             "name": "Olivier Pérès",
