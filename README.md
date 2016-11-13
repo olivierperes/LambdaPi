@@ -46,6 +46,22 @@ and must also be commutative and associative. The identity value must be such th
 `$callback($identity, $x) == $x` for any value of `$x`. Calling this method on an empty Vector
 returns the identity value.
 
+## Install via Composer
+
+In your **composer.json**, include this:
+
+```json
+"require": {
+  "olivierperes/lambda-pi": "dev-master"
+}
+```
+
+## How to run the unit tests
+
+```bash
+vendor/bin/phpunit
+```
+
 ## A few notes on implementation
 
 The initial plan was to use threads, but this is incredibly impractical to do in PHP. It requires a
