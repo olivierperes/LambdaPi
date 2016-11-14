@@ -16,7 +16,7 @@ class FilterTest extends PHPUnit_Framework_TestCase {
     $this->assertEquals($lambda_pi_result, $standard_result);
   }
 
-  public function testMap()
+  public function testFilter()
   {
     $even = function($x)
     {
