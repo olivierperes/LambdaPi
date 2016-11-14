@@ -11,7 +11,7 @@ class ReduceTest extends PHPUnit_Framework_TestCase {
       return $x+$y;
     };
     $values = [];
-    $this->assertTrue((new Vector($values))->reduce($add, 0) == 0);
+    $this->assertEquals((new Vector($values))->reduce($add, 0), 0);
   }
 
   public function testReduce()
@@ -21,7 +21,7 @@ class ReduceTest extends PHPUnit_Framework_TestCase {
       return $x+$y;
     };
     $values = [4, 8, 15, 16, 23, 42];
-    $this->assertTrue((new Vector($values))->reduce($add, 0) == 108);
+    $this->assertEquals((new Vector($values))->reduce($add, 0), 108);
   }
 
 }
