@@ -34,7 +34,7 @@ class Vector
     {
       return $current_result + $new_result;
     };
-    $child_callback = function($array, $first, $last) use($callback)
+    $child_callback = function($first, $last) use($callback)
     {
       $result = [];
       for ($i = $first; $i < $last; $i++) {
@@ -82,7 +82,7 @@ class Vector
         $first = $i * $slice;
         $last = min(count($this->data), (($i+1) * $slice));
 
-        $result = $child_callback($this->data, $first, $last);
+        $result = $child_callback($first, $last);
         fwrite($sockets[0], serialize($result));
 
         fclose($sockets[0]);
@@ -119,7 +119,7 @@ class Vector
     {
       return $current_result + $new_result;
     };
-    $child_callback = function($array, $first, $last) use($callback)
+    $child_callback = function($first, $last) use($callback)
     {
       $result = [];
       for ($i = $first; $i < $last; $i++) {
@@ -148,7 +148,7 @@ class Vector
     {
       return $callback($current_result, $new_result);
     };
-    $child_callback = function($array, $first, $last) use($callback, $identity)
+    $child_callback = function($first, $last) use($callback, $identity)
     {
       $result = $identity;
       for ($i = $first; $i < $last; $i++) {
