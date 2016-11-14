@@ -18,7 +18,7 @@ class Vector
    */
   public function __construct(array $data)
   {
-    $this->data = $data;
+    $this->data = array_values($data);
   }
 
   /**
@@ -45,7 +45,8 @@ class Vector
       return $result;
     };
     $result = $this->genericParallel([], $parent_callback, $child_callback);
-    return new static(array_values($result));
+    ksort($result);
+    return new static($result);
   }
 
   /**
@@ -127,6 +128,7 @@ class Vector
       return $result;
     };
     $result = $this->genericParallel([], $parent_callback, $child_callback);
+    ksort($result);
     return new static($result);
   }
 
